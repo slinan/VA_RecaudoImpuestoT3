@@ -52,11 +52,23 @@ var histcatexplong = [];
 
 });
 
-    document.addEventListener('DOMContentLoaded', function() {
-        window.dispatchEvent(new Event('resize'));
-}, false);
     
+document.addEventListener("DOMContentLoaded", function (event) {
+        window.dispatchEvent(new Event('resize'));
+});
 
+function load() {
+        window.dispatchEvent(new Event('resize'));
+}
+window.onload = load;
+
+$(document).ready(function () {
+        window.dispatchEvent(new Event('resize'));
+});
+
+$(window).load(function () {
+        window.dispatchEvent(new Event('resize'));
+});
 
 
 
