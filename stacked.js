@@ -89,5 +89,3 @@ var histcatexplong = [];
         nv.utils.windowResize(chart.update);
         return chart;
     });
-
-    chart.update;
