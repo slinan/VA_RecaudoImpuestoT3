@@ -53,7 +53,7 @@ var histcatexplong = [];
 });
 
     document.addEventListener('DOMContentLoaded', function() {
-                nv.utils.windowResize(chart.update);
+        window.dispatchEvent(new Event('resize'));
 }, false);
     
 
