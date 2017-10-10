@@ -12,7 +12,7 @@
     <link href="nv/nv.d3.css" rel="stylesheet" type="text/css">
     <script src="nv/nv.d3.js" id="nv"></script>
     <script src="stacked.js" charset="utf-8"></script>
-<script src="multiline.js" charset="utf-8"></script>
+  <script src="multiline.js" charset="utf-8"></script>
         <style>
         text {
             font: 12px sans-serif;
@@ -90,6 +90,8 @@
     chart.render();
 
 });
+
+    window.dispatchEvent(new Event('resize'));
 </script>
 </body>
 </html>

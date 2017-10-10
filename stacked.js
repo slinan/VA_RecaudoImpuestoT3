@@ -85,15 +85,17 @@ var histcatexplong = [];
             });
 
         nv.utils.windowResize(chart2.update);
+        console.log("termina");
         return chart2;
     });
 
     document.addEventListener("DOMContentLoaded", function (event) {
+                        window.dispatchEvent(new Event('resize'));
 
 });
 
-    window.onload = function () {
-                window.dispatchEvent(new Event('resize'));
+    $(document).ready(function(){ window.dispatchEvent(new Event('resize')); }) 
 
-    }
+
+
 
