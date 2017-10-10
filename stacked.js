@@ -50,11 +50,9 @@ var histcatexplong = [];
     histcatexplong.push(arancel);
     histcatexplong.push(porClasificar);
 
-    chart.update
-
-
 });
     
+
 
 
 
@@ -91,3 +89,5 @@ var histcatexplong = [];
         nv.utils.windowResize(chart.update);
         return chart;
     });
+
+    chart.update;
