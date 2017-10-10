@@ -58,17 +58,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 function load() {
+        nv.utils.windowResize(chart.update);
         window.dispatchEvent(new Event('resize'));
 }
-window.onload = load;
-
-$(document).ready(function () {
-        window.dispatchEvent(new Event('resize'));
-});
-
-$(window).load(function () {
-        window.dispatchEvent(new Event('resize'));
-});
 
 
 
