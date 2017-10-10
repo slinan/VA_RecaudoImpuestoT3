@@ -1,6 +1,6 @@
 var histcatexplong = [];
 
-    d3.csv("data/impuestos2.csv", function(data) {
+    d3.csv("/data/impuestos2.csv", function(data) {
         rentaCuotas = {"key": "Renta Cuotas", "values" : []};
         retefuente = {"key": "Retefuente", "values" : []} 
         iva = {"key": "IVA", "values" : []} 
@@ -50,6 +50,8 @@ var histcatexplong = [];
     histcatexplong.push(arancel);
     histcatexplong.push(porClasificar);
 
+    chart.update
+
 
 });
     
@@ -75,7 +77,7 @@ var histcatexplong = [];
 
         d3.select('#chart1')
             .datum(histcatexplong)
-            .transition().duration(1000)
+            .transition().duration(500)
             .call(chart)
             .each('start', function() {
                 setTimeout(function() {
