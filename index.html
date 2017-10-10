@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Impuestos en Colombia</title>
+    <script src="jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="multiline.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="sticky-footer-navbar.css" rel="stylesheet">
     <script src="https://d3js.org/d3.v3.js" charset="utf-8"></script>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="nv/nv.d3.css" rel="stylesheet" type="text/css">
-    <script src="nv/nv.d3.js"></script>
+    <script src="nv/nv.d3.js" id="nv"></script>
+    <script src="stacked.js" charset="utf-8"></script>
+<script src="multiline.js" charset="utf-8"></script>
         <style>
         text {
             font: 12px sans-serif;
@@ -59,7 +62,7 @@
     </div>
 
 
-<svg id="chart1"></svg>
+<svg id="chart2"></svg>
 
 <div class="container">
 
@@ -88,7 +91,5 @@
 
 });
 </script>
-<script src="multiline.js" charset="utf-8"></script>
-<script src="stacked.js" charset="utf-8"></script>
 </body>
 </html>

@@ -52,49 +52,48 @@ var histcatexplong = [];
 
 });
 
-    
-document.addEventListener("DOMContentLoaded", function (event) {
-        window.dispatchEvent(new Event('resize'));
-});
-
-function load() {
-        nv.utils.windowResize(chart.update);
-        window.dispatchEvent(new Event('resize'));
-}
-
 
 
 
     var colors = d3.scale.category20();
 
-    var chart;
+    var chart2;
     nv.addGraph(function() {
-        chart = nv.models.stackedAreaChart()
+        chart2 = nv.models.stackedAreaChart()
             .useInteractiveGuideline(true)
             .x(function(d) { return d[0] })
             .y(function(d) { return d[1] })
             .controlLabels({stacked: "Stacked"})
-            .duration(0);
+            .duration(100);
 
-        chart.xAxis.tickFormat(d3.format('d'));
-        chart.yAxis.tickFormat(d3.format(',.4f'));
+        chart2.xAxis.tickFormat(d3.format('d'));
+        chart2.yAxis.tickFormat(d3.format(',.4f'));
 
-        chart.legend.vers('furious');
+        chart2.legend.vers('furious');
 
-        d3.select('#chart1')
+        d3.select('#chart2')
             .datum(histcatexplong)
-            .transition().duration(500)
-            .call(chart)
+            .transition().duration(200)
+            .call(chart2)
             .each('start', function() {
                 setTimeout(function() {
-                    d3.selectAll('#chart1 *').each(function() {
+                    d3.selectAll('#chart2 *').each(function() {
                         if(this.__transition__)
                             this.__transition__.duration = 1;
                     })
                 }, 0)
             });
 
-        nv.utils.windowResize(chart.update);
-
-        return chart;
+        nv.utils.windowResize(chart2.update);
+        return chart2;
     });
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+
+});
+
+    window.onload = function () {
+                window.dispatchEvent(new Event('resize'));
+
+    }
+

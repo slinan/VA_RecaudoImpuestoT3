@@ -218,3 +218,8 @@ function makeLineChart(dataset, xName, yObjs, axisLables) {
     };
     return chartObj;
 }
+
+    window.onload = function () {
+                window.dispatchEvent(new Event('resize'));
+
+    }
