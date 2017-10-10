@@ -222,6 +222,11 @@ function makeLineChart(dataset, xName, yObjs, axisLables) {
     window.onload = function () {
         console.log("resize");
                 window.dispatchEvent(new Event('resize'));
-                chart2.update();
+
+    }
+
+    window.onscroll = function () {
+        console.log("resize");
+                window.dispatchEvent(new Event('resize'));
 
     }
