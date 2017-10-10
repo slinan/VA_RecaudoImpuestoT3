@@ -1,28 +1,55 @@
 var histcatexplong = [];
 
-    d3.csv("/data/impuestos.csv", function(data) {
-        actividadInterna = {"key": "Actividad interna", "values" : []};
-        renta = {"key": "Renta", "values" : []} 
+    d3.csv("data/impuestos2.csv", function(data) {
+        rentaCuotas = {"key": "Renta Cuotas", "values" : []};
+        retefuente = {"key": "Retefuente", "values" : []} 
         iva = {"key": "IVA", "values" : []} 
-        timbre = {"key": "Timbre", "values" : []} 
+        timbreNacional = {"key": "Timbre Nacional", "values" : []} 
         gmf = {"key": "GMF", "values" : []} 
-        actividadExterna = {"key": "Actividad externa", "values" : []} 
+        patrimonio = {"key": "Patrimonio", "values" : []} 
+        riqueza = {"key": "Riqueza", "values" : []} 
+        alConsumo = {"key": "Al consumo", "values" : []} 
+        gasolinaYACPM = {"key": "Gasolina y ACPM", "values" : []} 
+        alCarbono = {"key": "Al carbono", "values" : []} 
+        cree = {"key": "CREE", "values" : []} 
+        ivaExterno = {"key": "IVA Externo", "values" : []} 
+        arancel = {"key": "Arancel", "values" : []} 
+        porClasificar = {"key": "Por clasificar", "values" : []} 
 
         data.forEach(function(d) {
-        actividadInterna.values.push([parseInt(d.year), parseFloat(d.actividadInterna)]);
-        renta.values.push([parseInt(d.year), parseFloat(d.renta)]);
+        rentaCuotas.values.push([parseInt(d.year), parseFloat(d.rentaCuotas)]);
+        retefuente.values.push([parseInt(d.year), parseFloat(d.retefuente)]);
         iva.values.push([parseInt(d.year), parseFloat(d.iva)]);
-        timbre.values.push([parseInt(d.year), parseFloat(d.timbre)]);
+        timbreNacional.values.push([parseInt(d.year), parseFloat(d.timbreNacional)]);
         gmf.values.push([parseInt(d.year), parseFloat(d.gmf)]);
-        actividadExterna.values.push([parseInt(d.year), parseFloat(d.actividadExterna)]);
+        patrimonio.values.push([parseInt(d.year), parseFloat(d.patrimonio)]);
+        riqueza.values.push([parseInt(d.year), parseFloat(d.riqueza)]);
+        alConsumo.values.push([parseInt(d.year), parseFloat(d.alConsumo)]);
+        gasolinaYACPM.values.push([parseInt(d.year), parseFloat(d.gasolinaYACPM)]);
+        alCarbono.values.push([parseInt(d.year), parseFloat(d.alCarbono)]);
+        cree.values.push([parseInt(d.year), parseFloat(d.cree)]);
+        ivaExterno.values.push([parseInt(d.year), parseFloat(d.ivaExterno)]);
+        arancel.values.push([parseInt(d.year), parseFloat(d.arancel)]);
+        porClasificar.values.push([parseInt(d.year), parseFloat(d.porClasificar)]);
+
+
 
     });
-    histcatexplong.push(actividadInterna);
-    histcatexplong.push(renta);
+    histcatexplong.push(rentaCuotas);
+    histcatexplong.push(retefuente);
     histcatexplong.push(iva);
-    histcatexplong.push(timbre);
+    histcatexplong.push(timbreNacional);
     histcatexplong.push(gmf);
-    histcatexplong.push(actividadExterna);
+    histcatexplong.push(patrimonio);
+    histcatexplong.push(riqueza);
+    histcatexplong.push(alConsumo);
+    histcatexplong.push(gasolinaYACPM);
+    histcatexplong.push(alCarbono);
+    histcatexplong.push(cree);
+    histcatexplong.push(ivaExterno);
+    histcatexplong.push(arancel);
+    histcatexplong.push(porClasificar);
+
 
 });
     
