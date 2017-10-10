@@ -1,6 +1,6 @@
 var histcatexplong = [];
 
-    d3.csv("/data/impuestos2.csv", function(data) {
+    d3.csv("impuestos2.csv", function(data) {
         rentaCuotas = {"key": "Renta Cuotas", "values" : []};
         retefuente = {"key": "Retefuente", "values" : []} 
         iva = {"key": "IVA", "values" : []} 
