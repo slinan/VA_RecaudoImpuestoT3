@@ -51,6 +51,10 @@ var histcatexplong = [];
     histcatexplong.push(porClasificar);
 
 });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        
+}, false);
     
 
 
@@ -66,7 +70,7 @@ var histcatexplong = [];
             .x(function(d) { return d[0] })
             .y(function(d) { return d[1] })
             .controlLabels({stacked: "Stacked"})
-            .duration(300);
+            .duration(0);
 
         chart.xAxis.tickFormat(d3.format('d'));
         chart.yAxis.tickFormat(d3.format(',.4f'));
@@ -87,5 +91,6 @@ var histcatexplong = [];
             });
 
         nv.utils.windowResize(chart.update);
+
         return chart;
     });
